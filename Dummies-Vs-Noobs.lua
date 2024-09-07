@@ -66,14 +66,6 @@ spawn(function()
                                 task.wait()
                                 if Tool.Name == "Aerorig" then
                                     Remote:FireServer(HitPart,1000)
-                                elseif Tool:GetAttribute("Class") == "Melee" then
-                                    if HitPart.Name ~= "Head" then if Enemy:FindFirstChild("Head") then HitPart = Enemy.Head end end
-                                    Remote:FireServer(HitPart,1000)
-                                    task.wait(0.5)
-                                elseif Tool:GetAttribute("Class") == "Gun" then
-                                    if HitPart.Name ~= "Head" then if Enemy:FindFirstChild("Head") then HitPart = Enemy.Head end end
-                                    Remote:FireServer(HitPart,HitPart.Position,game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position)
-                                    task.wait(0.1)
                                 end
                             until Humanoid.Health <= 0 or game.Players.LocalPlayer.Character.Humanoid.Health <= 0 or Tool.Parent.Name == "Backpack"
                         end
