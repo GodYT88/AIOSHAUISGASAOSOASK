@@ -82,7 +82,8 @@ spawn(function()
 							Remote:FireServer(HitPart,1000)
 						until Humanoid.Health <= 0 or game.Players.LocalPlayer.Character.Humanoid.Health <= 0 or A == nil or Remote.Parent.Parent.Name == "Backpack"
 					end
-			end
-		end
+			    end
+		    end
+        end
     end
 end)
